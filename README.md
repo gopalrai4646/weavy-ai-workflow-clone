@@ -3,7 +3,7 @@
 
 A high-performance **visual workflow builder for LLM automation**, featuring a pixel-perfect React Flow canvas, **Google Gemini API integration**, and **asynchronous task execution with detailed history tracking**.
 
-Build complex AI workflows by visually connecting nodes and executing them with **dependency resolution and parallel processing**.
+ Build complex AI workflows by visually connecting nodes and executing them with **dependency resolution and parallel processing**.
 
 🔗 **Live Deployment**: https://weavy-ai-workflow-clone.vercel.app/
 
