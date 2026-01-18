@@ -1,0 +1,8 @@
+{
+  "name": "Weavy AI Workflow Clone",
+  "description": "A high-performance workflow builder for LLM automation, featuring a pixel-perfect React Flow canvas, Gemini API integration, and async task execution history.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

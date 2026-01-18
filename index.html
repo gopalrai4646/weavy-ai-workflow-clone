@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weavy AI Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://esm.sh/reactflow@11.11.4/dist/style.css">
+    <style>
+        :root {
+            --bg-main: #0b0e14;
+            --bg-sidebar: #0f1218;
+            --border-color: #1e293b;
+            --accent: #8b5cf6;
+            --accent-hover: #a78bfa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: #e2e8f0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* React Flow Overrides */
+        .react-flow__background {
+          background-color: var(--bg-main);
+        }
+        .react-flow__edge-path {
+            stroke: var(--accent);
+            stroke-width: 2.5;
+            transition: stroke 0.3s ease;
+        }
+        .react-flow__edge.animated path {
+          stroke-dasharray: 5;
+          animation: react-flow__dashdraw 0.5s linear infinite;
+        }
+        .react-flow__controls {
+          box-shadow: none !important;
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        .react-flow__controls button {
+            background: #1e293b;
+            border-bottom: 1px solid var(--border-color);
+            fill: #f1f5f9;
+            color: #f1f5f9;
+        }
+        .react-flow__controls button:hover {
+            background: #334155;
+        }
+        .react-flow__minimap {
+            background-color: var(--bg-main) !important;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+        .react-flow__handle {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border: 2px solid var(--bg-main);
+            transition: all 0.2s ease;
+        }
+        .react-flow__handle:hover {
+          width: 10px;
+          height: 10px;
+          background: var(--accent-hover);
+        }
+        
+        /* Node Execution Glow */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); border-color: rgba(139, 92, 246, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(139, 92, 246, 0); border-color: rgba(139, 92, 246, 1); }
+            100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); border-color: rgba(139, 92, 246, 0.6); }
+        }
+        .node-executing {
+            animation: pulse-glow 1.5s infinite ease-in-out;
+            border-color: var(--accent) !important;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "zustand": "https://esm.sh/zustand@^5.0.10",
+    "reactflow": "https://esm.sh/reactflow@^11.11.4",
+    "reactflow/": "https://esm.sh/reactflow@^11.11.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./frontend/index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
