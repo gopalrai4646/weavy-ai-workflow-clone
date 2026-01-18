@@ -1,20 +1,59 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Weavy AI Workflow Clone
 
-# Run and deploy your AI Studio app
+A high-performance **visual workflow builder for LLM automation**, featuring a pixel-perfect React Flow canvas, **Google Gemini API integration**, and **asynchronous task execution with detailed history tracking**.
 
-This contains everything you need to run your app locally.
+Build complex AI workflows by visually connecting nodes and executing them with **dependency resolution and parallel processing**.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1h8GDf3JQu6KEW4rpyy6rUZctVfm9q3Ft
+🔗 **Live Deployment**: https://weavy-ai-workflow-clone.vercel.app/
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🚀 Features
 
+- **Visual Workflow Builder**  
+  Drag-and-drop workflow creation using React Flow.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Node-Based Architecture**  
+  Build workflows using the following node types:
+  - **Text Node** – Input text for system and user prompts  
+  - **Upload Image** – Upload and process images (JPG, PNG, WebP)  
+  - **Upload Video** – Upload and process videos (MP4, MOV)  
+  - **Run LLM** – Execute Gemini AI models (Gemini 3 Flash / Pro) with vision support  
+  - **Crop Image** – Crop images using percentage-based coordinates  
+  - **Extract Frame** – Extract frames from videos at specific timestamps  
+
+- **DAG Validation**  
+  Automatic cycle detection and dependency validation.
+
+- **Asynchronous Execution Engine**  
+  Parallel execution of independent nodes using topological sorting.
+
+- **Execution History**  
+  Complete workflow run tracking with node-level execution logs.
+
+- **Real-time Status Updates**  
+  Visual indicators for each node:
+  - Idle  
+  - Running  
+  - Success  
+  - Failed  
+
+- **Modern UI**  
+  Dark theme, smooth animations, and responsive design.
+
+- **Undo / Redo Support**  
+  History-based workflow modification management.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19 + TypeScript  
+- **State Management**: Zustand  
+- **Workflow Canvas**: React Flow 11  
+- **AI Integration**: Google Gemini AI (`@google/genai`)  
+- **Icons**: Lucide React  
+- **Build Tool**: Vite 6  
+- **Styling**: Tailwind CSS (CDN)
+
+---
